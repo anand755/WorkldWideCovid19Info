@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for WorkldWideCovid19Info project.
 
@@ -24,7 +25,7 @@ SECRET_KEY = '*_ud5qzjtgb$poh%(i_$3ye5lnhu7zk!l$th90=$b0hv@y8iz3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wwcovid19info.herokuapp.com']
 
 # Application definition
 
@@ -117,3 +118,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
